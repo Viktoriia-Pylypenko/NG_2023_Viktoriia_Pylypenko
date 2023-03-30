@@ -9,15 +9,18 @@ secondNumber = int(input("Input a second number: "))
 
 actionsOfTheNumbers = input("Please, select actions on numbers: -, +, *, /: ")
 
-if actionsOfTheNumbers == "+":
-    print("Your sum: " + str(firstNumber + secondNumber))
-elif actionsOfTheNumbers == "-":
-     print("Your diferense:" + str(firstNumber - secondNumber))
-elif actionsOfTheNumbers == "*":
-     print("Your multiplicatio:" + str(firstNumber * secondNumber))
-elif actionsOfTheNumbers == "/":
-     print("Your division: " + str(firstNumber / secondNumber))
-else:
-    print("You don`t select actions.")
+#match 
+
+match actionsOfTheNumbers:
+     case "+":
+          print("Your sum: " + str(firstNumber + secondNumber))
+     case "-":
+          print("Your diferense:" + str(firstNumber - secondNumber))
+     case "*":
+          print("Your multiplication:" + str(firstNumber * secondNumber))
+     case "/":
+          print("Your division: " + str(firstNumber / secondNumber))
+     case _:
+          print("You don`t select actions.")
 
 #end ^_^
